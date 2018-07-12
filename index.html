@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSS stylesheets -->
+    <link rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+    integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/reset.css" type="text/css" >
+    <link rel="stylesheet" href="./assets/css/style.css" type="text/css" >
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- GoogleFonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:600">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans:300,500">
+    <!-- jQuery CDN & JavaScript path -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="./assets/javascript/jquery.countdown.min.js"></script>
+
+
+
+    <title>jQuery Countdown</title>
+
+  </head>
+  <body>
+    <div class="jumbotron text-center" style="margin-bottom:0">
+      <h1>Your holiday<i class="fa fa-bicycle" style="font-size: 36px;color:white;"></i>
+         begins in </h1>
+      <!--<p>We'll keep you notified through email</p>-->
+    </div>
+
+    <div class="container" >
+      <div id="clock" class="timer text-center"></div>
+      <input type="text" placeholder="Your email address" />
+      <input type="button" value="Submit" />
+    </div>
+
+    	<script type="text/javascript">
+      $(document).ready(function() {
+        $('#clock').countdown('2018/07/20', function(event) {
+          var $this = $(this).html(event.strftime(''
+          + '<span>%w</span> weeks '
+          + '<span>%d</span> days '
+          + '<span>%H</span> hr '
+          + '<span>%M</span> min '
+          + '<span>%S</span> sec'
+        ));
+        });
+      });
+      </script>
+  </body>
+</html>
